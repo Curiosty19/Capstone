@@ -11,7 +11,7 @@ You can figure out how to install node.js with [installing node.js](https://node
 MAKE SURE YOU HAVE NODE.JS INSTALLED.
 
 all the command have to be rooted in the repository file
-In the project directory, you can run these commands in order:
+In the project directory, run these commands in order:
 
 ### `npm -v`
 
