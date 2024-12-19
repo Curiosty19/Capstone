@@ -9,7 +9,7 @@ const LandingPage = () => {
       <Navbar />
       
       {/* Main Banner Section */}
-      <section id="hero" className="relative">
+      <section id="hero" className="relative mt-10">
         <img
           src={mainBanner}
           alt="Main Banner"
