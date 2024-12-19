@@ -53,7 +53,7 @@ const Navbar = () => {
           </li>
           <li className="flex items-center space-x-2">
             <span className="material-icons">info</span>
-            <Link to="#about" className="hover:text-[#d9d9d9]">
+            <Link to="/About-Us" className="hover:text-[#d9d9d9]">
               About Us
             </Link>
           </li>
@@ -90,7 +90,7 @@ const Navbar = () => {
             </li>
             <li className="flex items-center space-x-2">
               <span className="material-icons">info</span>
-              <Link to="#about" className="hover:text-[#d9d9d9]">
+              <Link to="/About-Us" className="hover:text-[#d9d9d9]">
                 About Us
               </Link>
             </li>
