@@ -40,26 +40,65 @@ const LandingPage = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-[#353535]">Our Services</h2>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="p-6 bg-white shadow-lg rounded-lg">
-            <h3 className="text-xl font-bold text-[#3c6e71]">Corporate Law</h3>
-            <p className="mt-2 text-[#353535]">
+      <section id="services" className="py-16 px-6 bg-[#f4f4f4]">
+        <h2 className="text-4xl font-bold text-center text-[#284b63]">Our Services</h2>
+        <p className="mt-4 text-center text-lg text-[#3c6e71]">
+          Delivering excellence in a variety of legal services.
+        </p>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {/* Service 1 */}
+          <div className="flex flex-col items-center p-6 bg-white shadow-md rounded-lg">
+            <div className="w-16 h-16 flex items-center justify-center bg-[#284b63] text-white rounded-full">
+              <span className="material-icons text-4xl">gavel</span>
+            </div>
+            <h3 className="mt-6 text-xl font-semibold text-[#284b63]">
+              Corporate Law
+            </h3>
+            <p className="mt-4 text-center text-[#353535]">
               Expert legal advice for businesses, from startups to multinational corporations.
             </p>
+            <a
+              href="/Service"
+              className="mt-4 text-[#284b63] font-semibold hover:underline"
+            >
+              Learn More
+            </a>
           </div>
-          <div className="p-6 bg-white shadow-lg rounded-lg">
-            <h3 className="text-xl font-bold text-[#3c6e71]">Litigation</h3>
-            <p className="mt-2 text-[#353535]">
+          {/* Service 2 */}
+          <div className="flex flex-col items-center p-6 bg-white shadow-md rounded-lg">
+            <div className="w-16 h-16 flex items-center justify-center bg-[#284b63] text-white rounded-full">
+              <span className="material-icons text-4xl">account_balance</span>
+            </div>
+            <h3 className="mt-6 text-xl font-semibold text-[#284b63]">
+              Litigation
+            </h3>
+            <p className="mt-4 text-center text-[#353535]">
               Skilled representation for civil, criminal, and commercial disputes.
             </p>
+            <a
+              href="/Service"
+              className="mt-4 text-[#284b63] font-semibold hover:underline"
+            >
+              Learn More
+            </a>
           </div>
-          <div className="p-6 bg-white shadow-lg rounded-lg">
-            <h3 className="text-xl font-bold text-[#3c6e71]">Family Law</h3>
-            <p className="mt-2 text-[#353535]">
+          {/* Service 3 */}
+          <div className="flex flex-col items-center p-6 bg-white shadow-md rounded-lg">
+            <div className="w-16 h-16 flex items-center justify-center bg-[#284b63] text-white rounded-full">
+              <span className="material-icons text-4xl">family_restroom</span>
+            </div>
+            <h3 className="mt-6 text-xl font-semibold text-[#284b63]">
+              Family Law
+            </h3>
+            <p className="mt-4 text-center text-[#353535]">
               Compassionate guidance on family-related matters including divorce and custody.
             </p>
+            <a
+              href="/Service"
+              className="mt-4 text-[#284b63] font-semibold hover:underline"
+            >
+              Learn More
+            </a>
           </div>
         </div>
       </section>
