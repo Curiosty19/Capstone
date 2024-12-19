@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +13,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <nav
@@ -57,11 +62,31 @@ const Navbar = () => {
               About Us
             </Link>
           </li>
-          <li className="flex items-center space-x-2">
+          {/* Dropdown Menu */}
+          <li
+            className="relative group flex items-center space-x-2"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
             <span className="material-icons">group</span>
-            <Link to="#team" className="hover:text-[#d9d9d9]">
+            <span className="cursor-pointer hover:text-[#d9d9d9]">
               Our Team
-            </Link>
+            </span>
+            <ul
+              className={`absolute top-10 left-0 bg-[#3c6e71] text-white rounded-md shadow-lg py-2 w-40 transition-all ${
+                isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+            >
+              <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
+                <Link to="/team/partners">Partner</Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
+                <Link to="/team/associates">Associates</Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
+                <Link to="/team/support">Support Teams</Link>
+              </li>
+            </ul>
           </li>
           <li className="flex items-center space-x-2">
             <span className="material-icons">mail</span>
@@ -96,9 +121,30 @@ const Navbar = () => {
             </li>
             <li className="flex items-center space-x-2">
               <span className="material-icons">group</span>
-              <Link to="#team" className="hover:text-[#d9d9d9]">
-                Our Team
-              </Link>
+              <div>
+                <button
+                  onClick={toggleDropdown}
+                  className="hover:text-[#d9d9d9] flex items-center"
+                >
+                  Our Team
+                  <span className="material-icons ml-2">
+                    {isDropdownOpen ? "expand_less" : "expand_more"}
+                  </span>
+                </button>
+                {isDropdownOpen && (
+                  <ul className="bg-[#3c6e71] text-white rounded-md mt-2 py-2 w-40 space-y-2">
+                    <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
+                      <Link to="/team/partners">Partner</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
+                      <Link to="/team/associates">Associates</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
+                      <Link to="/team/support">Support Teams</Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
             </li>
             <li className="flex items-center space-x-2">
               <span className="material-icons">mail</span>
