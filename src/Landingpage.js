@@ -15,7 +15,7 @@ const LandingPage = () => {
           alt="Main Banner"
           className="w-full h-96 object-cover"
         />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white bg-[#3c6e71] bg-opacity-50 p-8 rounded-lg">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white bg-[#3c6e71] bg-opacity-40 p-8 rounded-lg">
           <h1 className="text-4xl font-bold text-[#ffffff]">
             Welcome to Nasution Dananto & Rekan
           </h1>
