@@ -65,7 +65,7 @@ const Navbar = () => {
           {/* New Clients Button */}
           <li className="flex items-center space-x-2">
             <span className="material-icons">business</span>
-            <Link to="/ClientsPage" className="hover:text-[#d9d9d9]">
+            <Link to="/Clients" className="hover:text-[#d9d9d9]">
               Clients
             </Link>
           </li>
@@ -85,13 +85,13 @@ const Navbar = () => {
               }`}
             >
               <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
-                <Link to="/team/partners">Partner</Link>
+                <Link to="/OurTeam/Partner">Partner</Link>
               </li>
               <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
-                <Link to="/team/associates">Associates</Link>
+                <Link to="/OurTeam/Associates">Associates</Link>
               </li>
               <li className="px-4 py-2 hover:bg-[#d9d9d9] hover:text-[#284b63]">
-                <Link to="/team/support">Support Teams</Link>
+                <Link to="/OurTeam/SupportTeam">Support Teams</Link>
               </li>
             </ul>
           </li>

@@ -4,7 +4,10 @@ import LandingPage from "./Landingpage";
 import ContactPage from "./pages/Contactpage";
 import ServicePage from "./pages/Servicepage"; 
 import AboutPage from "./pages/AboutUs-Page";
-import ClientsPage from "./pages/Clients-Page"; // Add more pages as needed
+import ClientsPage from "./pages/Clients-Page";
+import AssociatesPage from "./pages/AssociatesPage"; 
+import PartnerPage from "./pages/PartnerPage";
+import SupportTeamsPage from "./pages/SupportTeamsPage";// Add more pages as needed
 
 const Routing = () => {
   return (
@@ -13,7 +16,10 @@ const Routing = () => {
       <Route path="/Contact" element={<ContactPage />} />
       <Route path="/Service" element={<ServicePage />} />
       <Route path="/About-Us" element={<AboutPage />} />
-      <Route path="/ClientsPage" element={<ClientsPage />} />
+      <Route path="/Clients" element={<ClientsPage />} />
+      <Route path="/OurTeam/Associates" element={<AssociatesPage />} />
+      <Route path="/OurTeam/Partner" element={<PartnerPage />} />
+      <Route path="/OurTeam/SupportTeam" element={<SupportTeamsPage />} />
       {/* Add more routes here */}
     </Routes>
   );
