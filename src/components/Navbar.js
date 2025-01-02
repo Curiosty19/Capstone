@@ -62,6 +62,13 @@ const Navbar = () => {
               About Us
             </Link>
           </li>
+          {/* New Clients Button */}
+          <li className="flex items-center space-x-2">
+            <span className="material-icons">business</span>
+            <Link to="/ClientsPage" className="hover:text-[#d9d9d9]">
+              Clients
+            </Link>
+          </li>
           {/* Dropdown Menu */}
           <li
             className="relative group flex items-center space-x-2"
@@ -117,6 +124,13 @@ const Navbar = () => {
               <span className="material-icons">info</span>
               <Link to="/About-Us" className="hover:text-[#d9d9d9]">
                 About Us
+              </Link>
+            </li>
+            {/* New Clients Button in Mobile Menu */}
+            <li className="flex items-center space-x-2">
+              <span className="material-icons">business</span>
+              <Link to="/Clients" className="hover:text-[#d9d9d9]">
+                Clients
               </Link>
             </li>
             <li className="flex items-center space-x-2">

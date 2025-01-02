@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Partner_Profile from '../asset/Partner_Profile.jpg';
+import { FaEye, FaHandsHelping } from "react-icons/fa"; // Importing icons
 
 const AboutPage = () => {
   return (
@@ -25,9 +27,9 @@ const AboutPage = () => {
           {/* Image Section */}
           <div>
             <img
-              src="path/to/your/image.jpg" // Replace this with the actual image path
+              src={Partner_Profile} 
               alt="Team of Nasution Dananto & Partners"
-              className="rounded-md shadow-lg"
+              className="rounded-lg shadow-lg max-w-md mx-auto"
             />
           </div>
 
@@ -35,27 +37,36 @@ const AboutPage = () => {
           <div>
             <h2 className="text-3xl font-bold mb-4">Nasution Dananto & Partners</h2>
             <p className="mb-4">
-              Founded by Mr. Amir Hood Nasution, S.H., on October 30, 1970, 
-              Nasution Dananto & Partners has represented foreign, multinational, 
+              Founded by Mr. Amir Hood Nasution, S.H., on October 30, 1970,
+              Nasution Dananto & Partners has represented foreign, multinational,
               national, and individual clients to this day.
             </p>
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Vision:</h3>
-              <p>
-                Recognized as an internationally standard law firm, with excellence, 
-                competence, professionalism, innovation, and trustworthiness, focusing 
-                on human potential.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Mission:</h3>
-              <p>
-                Providing high-quality legal services through consultations and legal 
-                assistance for businesses, government agencies, and individuals, with 
-                a focus on the regulations, laws, and legal frameworks applicable in 
-                the Republic of Indonesia.
-              </p>
-            </div>
+          </div>
+        </div>
+
+        {/* Vision and Mission Section */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Vision */}
+          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+            <FaEye className="text-5xl text-[#284b63] mx-auto" />
+            <h3 className="text-xl font-bold mt-4 text-[#284b63]">Vision</h3>
+            <p className="mt-4 text-gray-700">
+              Recognized as an internationally standard law firm, with
+              excellence, competence, professionalism, innovation, and
+              trustworthiness, focusing on human potential.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+            <FaHandsHelping className="text-5xl text-[#284b63] mx-auto" />
+            <h3 className="text-xl font-bold mt-4 text-[#284b63]">Mission</h3>
+            <p className="mt-4 text-gray-700">
+              Providing high-quality legal services through consultations and
+              legal assistance for businesses, government agencies, and
+              individuals, with a focus on the regulations, laws, and legal
+              frameworks applicable in the Republic of Indonesia.
+            </p>
           </div>
         </div>
       </div>

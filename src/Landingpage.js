@@ -2,8 +2,15 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import mainBanner from './asset/Main_banner_captsone.jpg';
+import CountUp from "react-countup";
 
 const LandingPage = () => {
+  const stats = [
+    { label: "Cases Won (%)", value: 95 },
+    { label: "Trusted Clients", value: 270 },
+    { label: "Dedicated Lawyers", value: 10 },
+    { label: "Cases Dismissed (%)", value: 25 },
+  ];
   return (
     <div className="font-sans">
       <Navbar />
@@ -99,6 +106,24 @@ const LandingPage = () => {
             >
               Learn More
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Counter Section */}
+      <section className="bg-gray-100 py-12">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-8">Our Achievements</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="bg-white shadow-lg rounded-lg p-6">
+                <h3 className="text-4xl font-bold text-blue-900">
+                  <CountUp end={stat.value} duration={2.5} />
+                  {stat.label.includes("(%)") ? "%" : ""}
+                </h3>
+                <p className="mt-4 text-gray-700">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
