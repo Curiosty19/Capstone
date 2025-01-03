@@ -127,6 +127,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      
 
       {/* Testimonials Section */}
       <section id="testimonials" className="py-12 px-6 bg-[#284b63] text-white">
